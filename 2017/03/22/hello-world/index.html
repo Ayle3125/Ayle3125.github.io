@@ -12,21 +12,14 @@
 <h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
 <h3 id="set-registry"><a href="#set-registry" class="headerlink" title="set registry"></a>set registry</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm config <span class="built_in">set</span> registry <span class="string">"https://registry.npm.taobao.org"</span></div></pre></td></tr></table></figure>
-<h3 id="some-log"><a href="#some-log" class="headerlink" title="some log"></a>some log</h3><p>本来想用categories，但是看到archives已经如此优秀，好像没必要多此一举。</p>
-<p>遇到问题：</p>
-<blockquote>
-<p>%1 is not a valid Win32 application</p>
-</blockquote>
-<p>Solved:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install hexo-deployer-git --save</div></pre></td></tr></table></figure>
-<p>不看官方文档的锅，写新手向的博文时就不能友好一点吗:)</p>
 <h3 id="主题"><a href="#主题" class="headerlink" title="主题"></a>主题</h3><p><a href="https://github.com/lotabout/hexo-theme-noise" target="_blank" rel="external">noise</a></p>
-<h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><p><a href="http://www.jianshu.com/p/c2ba9533088a" target="_blank" rel="external">图片插件</a><br><strong>注意其中第二步</strong></p>
+<h3 id="图片插件"><a href="#图片插件" class="headerlink" title="图片插件"></a>图片插件</h3><p>插件使用：<a href="http://www.jianshu.com/p/c2ba9533088a" target="_blank" rel="external">http://www.jianshu.com/p/c2ba9533088a</a></p>
+<p><strong>注意其中第二步</strong></p>
 <blockquote>
 <p>2.在hexo的目录下执行npm install <a href="https://github.com/CodeFalling/hexo-asset-image" target="_blank" rel="external">https://github.com/CodeFalling/hexo-asset-image</a> –save（需要等待一段时间）。</p>
 </blockquote>
 <p>需要改成<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install hexo-asset-image --save</div></pre></td></tr></table></figure></p>
-<p>安装教程：<a href="http://lowrank.science/Hexo-Github/" target="_blank" rel="external">http://lowrank.science/Hexo-Github/</a></p>
+<h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><p>安装教程：<a href="http://lowrank.science/Hexo-Github/" target="_blank" rel="external">http://lowrank.science/Hexo-Github/</a></p>
 <p>然而为了尽量少踩坑，建议基本安装按照官方文档做：<a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="external">https://hexo.io/zh-cn/docs/</a></p>
 </div></div><div class="post-main post-comment"></div></article><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.css"><script src="//cdn.bootcss.com/jquery/2.0.3/jquery.min.js"></script><script src="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.pack.js"></script><script>$(document).ready(function() {
     $(".fancybox").fancybox();
