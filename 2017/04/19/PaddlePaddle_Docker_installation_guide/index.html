@@ -17,13 +17,14 @@
 <h2 id="2-Docker-installation"><a href="#2-Docker-installation" class="headerlink" title="2. Docker installation"></a><span id="Docker">2. Docker installation</span></h2><p><strong>注意版本&gt;1.9.0</strong>, 因为后面使用gpu版本要安装的nvidia-docker有要求。</p>
 <ul>
 <li>官方安装文档<a href="https://docs.docker.com/engine/installation/linux/rhel/#uninstall-docker-ee" target="_blank" rel="external">https://docs.docker.com/engine/installation/linux/rhel/#uninstall-docker-ee</a></li>
-<li><p>这里选择下载v1.9.1,分别下载后安装。<br><br>下载地址<a href="https://yum.dockerproject.org/repo/main/centos/7/Packages/" target="_blank" rel="external">https://yum.dockerproject.org/repo/main/centos/7/Packages/</a>.<br>&ensp;</p>
+<li>这里选择下载v1.9.1,分别下载后安装。<br><br>下载地址<a href="https://yum.dockerproject.org/repo/main/centos/7/Packages/" target="_blank" rel="external">https://yum.dockerproject.org/repo/main/centos/7/Packages/</a>.</li>
+</ul>
+<p>&ensp;注意下载顺序</p>
 <blockquote>
-<p>   docker-engine-1.9.1-1.el7.centos.x86_64.rpm<br><br> docker-engine-selinux-1.9.1-1.el7.centos.noarch<br><br> docker-engine-selinux-1.9.0-1.el7.centos.src.rpm</p>
+<p>   docker-engine-selinux-1.9.1-1.el7.centos.noarch.rpm<br><br> docker-engine-selinux-1.9.0-1.el7.centos.src.rpm<br><br>    docker-engine-1.9.1-1.el7.centos.x86_64.rpm</p>
 </blockquote>
-</li>
-<li><p>安装后启动：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">sudo systemctl start docker-engine</div><div class="line"><span class="comment"># test</span></div><div class="line">sudo docker -v</div></pre></td></tr></table></figure>
+<ul>
+<li>安装后启动：<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">sudo systemctl start docker</div><div class="line"><span class="comment"># test</span></div><div class="line">sudo docker images</div></pre></td></tr></table></figure>
 </li>
 </ul>
 <p>成功显示版本则安装成功。</p>
@@ -36,7 +37,7 @@
 <ul>
 <li>参考：<a href="https://github.com/NVIDIA/nvidia-docker" target="_blank" rel="external">https://github.com/NVIDIA/nvidia-docker</a></li>
 <li>下载地址： <a href="https://github.com/NVIDIA/nvidia-docker/releases/" target="_blank" rel="external">https://github.com/NVIDIA/nvidia-docker/releases/</a></li>
-<li>这里我们选择v1.0.1<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">sudo rpm -i nvidia-docker*.rpm</div><div class="line">sudo systemctl start nvidia-docker</div><div class="line"><span class="comment"># Test nvidia-smi</span></div><div class="line">nvidia-docker -v</div></pre></td></tr></table></figure>
+<li>这里我们选择v1.0.1<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">sudo rpm -i nvidia-docker*.rpm</div><div class="line">sudo systemctl start nvidia-docker</div><div class="line"><span class="comment"># Test nvidia-smi</span></div><div class="line">nvidia-docker images</div></pre></td></tr></table></figure>
 </li>
 </ul>
 <h2 id="4-PaddlePaddle’s-Docker-image"><a href="#4-PaddlePaddle’s-Docker-image" class="headerlink" title="4. PaddlePaddle’s Docker image"></a><span id="PaddlePaddle">4. PaddlePaddle’s Docker image</span></h2><p> 参考官方文档(<strong>请查看github上的文档，官网上的更新很慢</strong>)：<a href="https://github.com/PaddlePaddle/Paddle/blob/develop/doc/getstarted/build_and_install/" target="_blank" rel="external">https://github.com/PaddlePaddle/Paddle/blob/develop/doc/getstarted/build_and_install/</a><br> 运行容器不同</p>
@@ -76,8 +77,20 @@
 </li>
 </ul>
 <hr>
-<p><em><em>padpad作为开源不久的代码，文档资料是真的少，还好github上还算活跃、文档也一直在更新。<br>   //如果不是这个比赛我大概真的不会去看。<br>     //比赛完就转tenserflow- -</em></em></p>
-</div></div><div class="post-main post-comment"></div></article><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.css"><script src="//cdn.bootcss.com/jquery/2.0.3/jquery.min.js"></script><script src="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.pack.js"></script><script>$(document).ready(function() {
+<p><em><em>padpad作为开源不久的代码，文档资料是真的少，还好github上还算活跃、文档也一直在更新。<br>   //如果不是这个比赛我大概真的不会去看。<br>     //比赛完就转tensorflow- -</em></em></p>
+</div></div><div class="post-main post-comment"><div id="disqus_thread"></div><script type="text/javascript">
+var disqus_shortname = 'ayle3125';
+var disqus_identifier = '2017/04/19/PaddlePaddle_Docker_installation_guide/';
+var disqus_title = 'PaddlePaddle安装记录（gpu+docker版本)';
+var disqus_url = 'http://ayle3125.github.io/2017/04/19/PaddlePaddle_Docker_installation_guide/';
+(function() {
+   var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+   dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+   (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">Blog comments powered by <span class="logo-disqus">Disqus</span></a></div></article><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.css"><script src="//cdn.bootcss.com/jquery/2.0.3/jquery.min.js"></script><script src="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.pack.js"></script><script>$(document).ready(function() {
     $(".fancybox").fancybox();
 });
 </script></body></html>
